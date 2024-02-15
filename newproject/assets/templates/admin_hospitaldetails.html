@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+  table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<h1 style="text-align:center">Patient Details</h1>
+<button type="button" style="margin-left:200px"> <a href="{% url 'viewdetails' %}">User Details</a>  </button>
+<button type="button" style="margin-left:500px"> <a href="{% url 'hospital_details1' %}">Add Patient Details</a>  </button>
+<table>
+    <tr>
+        <th>Patient Name</th>
+        <th>Doctor Name</th>
+        <th>Hospital Img</th>
+        <th>Delete  </th>
+    </tr>
+    {% for b in object %}
+    <tr>
+        <td>{{b.Patient_Name}}</td>
+        <td>{{b.Doctor_Name}}</td>
+        <td><img src="{{b.Patient_Data.url}}" style="height:100px;width:100px"></td>
+        <td><a href="{% url 'delete_viewdetails1' b.id %}"> Delete</a></td>
+        {% endfor %}
+    </tr>
+</table>
+
+</body>
+</html>

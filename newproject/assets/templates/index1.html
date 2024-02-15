@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            width: 300px; /* Set the desired width of your form */
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+PatientName: <input type="text" name="ptname"><br><br>
+DoctorName: <input type="text" name="drname"><br><br>
+Patientid: <input type="text" name="pid"><br><br>
+Patientdata: <input type="file" name="ptdata"><br><br>
+Admitdate: <input type="text" name="admitdate"><br><br>
+Dischargedate: <input type="text" name="disdate"><br><br>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>

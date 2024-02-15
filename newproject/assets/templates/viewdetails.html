@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<style>
+  table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<body>
+    <h1 style="text-align:center">User Details</h1>
+<button type="button" style="margin-left:200px"> <a href="{% url 'admin_hospitaldetails' %}">View Patient Details</a></button>
+<table style="margin-left:500px;padding:5px">
+    <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    </tr>
+   {% for a in object %}<tr>
+    <td>{{a.firstname}}</td>
+    <td>{{a.lastname}}</td>
+{% endfor %}</tr>
+</table>
+
+</body>
+</html>

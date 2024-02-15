@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details1</title>
+</head>
+<body>
+<h2 style="text-align:right">Welcome {{uname}} !!</h2>
+<button type="button" style="margin-left"><a href="{% url 'mydetails' %}">My Details</a></button>
+<table>
+    <tr>
+    <th>Patient Name</th>
+    <th>Doctor Name</th>
+    </tr>
+   {% for b in object %}<tr>
+    <td>{{b.Patient_Name}}</td>
+    <td>{{b.Doctor_Name}}</td>
+    <td><img src="{{b.Patient_Data.url}}" style="height:100px;width:100px"></td>
+{% endfor %}</tr>
+</table>
+
+
+</body>
+</html>

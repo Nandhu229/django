@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mydetails</title>
+</head>
+<style>
+  table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<body>
+<h1 style="text-align:center">My Details</h1>
+<table style="margin-left:500px;padding:5px">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>User Id</th>
+        <th>Password</th>
+        <th>Mobile Number</th>
+        <th>Email Id</th>
+    </tr>
+    <tr><td>{{object.firstname}}</td>
+        <td>{{object.lastname}}</td>
+        <td>{{object.userid}}</td>
+        <td>{{object.password}}</td>
+        <td>{{object.mobilenum}}</td>
+        <td>{{object.email}}</td>
+    </tr>
+</body>
+</html>
